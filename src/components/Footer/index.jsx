@@ -123,6 +123,25 @@ const berbahagia = "Chúng tôi hạnh phúc vô cùng";
             />
           </Grid>
         </Grid>
+        {/* QR Code */}
+<Grid item xs={12} mt={10} textAlign="center">
+  <Box
+    component="img"
+    src="/assets/images/QR.jfif" // thay bằng đường dẫn QR code của bạn
+    alt="QR Code"
+    sx={{
+      width: { xs: 200, md: 250 },
+      height: "auto",
+      mx: "auto",
+      borderRadius: 4,
+      boxShadow: 3,
+    }}
+  />
+  <Typography variant="h6" mt={2} sx={{ fontFamily: "Arizonia" }}>
+    Quét mã để gửi lời chúc
+  </Typography>
+</Grid>
+
       </Container>
     </Box>
   );
