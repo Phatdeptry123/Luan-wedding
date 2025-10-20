@@ -9,7 +9,7 @@ export const theme = createTheme({
     mode: "dark",
     divider: "rgb(213, 206, 163)",
     background: {
-      default: "rgb(60, 42, 33)",
+      default: "rgba(109, 56, 50, 1)",
       paper: "rgb(213, 206, 163)",
     },
     text: {
