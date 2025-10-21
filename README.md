@@ -52,9 +52,6 @@ Kami bermaksud menyelenggarakan acara Akad dan Resepsi Pernikahan.
 ⏰ 10.00 WIB s/d Selesai
 🏡 Alamat :  Jl. H. Nurleman, RT 002 RW 003, Kel. Benda Baru, Kec. Pamulang, Tangerang Selatan
 
-Berikut link untuk info lengkap dari acara kami untuk mengantarkan Bapak/Ibu/Saudara/i ketujuan:
-*https://saifulcindy.vercel.app/*
-
 Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan do'a restu di acara pernikahan kami.
 
 Mohon maaf perihal undangan hanya dibagikan melalui pesan ini.
