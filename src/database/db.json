@@ -1,12 +1,12 @@
 {
   "application": {
     "name": "Lễ cưới của Luân & Trúc",
-    "description": "Lễ cưới của Luân & Trúc. Thứ sáu, 08 Tháng 11 2025",
+    "description": "Lễ cưới của Luân & Trúc. Thứ bảy, 08 Tháng 11 2025",
     "version": "1.0.0"
   },
   "wedding": {
     "akad": {
-      "tanggal": "Thứ sáu, 08 Tháng 11 2025",
+      "tanggal": "Thứ bảy, 08 Tháng 11 2025",
       "jam": "",
       "lokasi": "Tư gia chú rể",
       "alamat": "Khu vực 7, Phường Ngã Năm, Thành phố Cần Thơ",
