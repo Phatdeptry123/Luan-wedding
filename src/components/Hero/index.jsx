@@ -139,22 +139,22 @@ const Hero = () => {
             </Typography>
 
             <Typography
-              variant="h1"
+              variant="h2"
               sx={{
                 textAlign: {
                   md: "left",
                   xs: "center",
                 },
                 fontSize: {
-                  md: "10em",
-                  xs: "6em",
+                  md: "6em",
+                  xs: "4em",
                 },
                 textShadow: "5px 5px rgba(60, 42, 33, 0.6)",
               }}
             >
               {mempelai.split(" ").map((text, key) => (
                 <TextMask key={key} variants={textVariants}>
-                  {text}
+                  {text} 
                 </TextMask>
               ))}
             </Typography>

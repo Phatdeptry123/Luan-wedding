@@ -127,7 +127,7 @@ const berbahagia = "Chúng tôi hạnh phúc vô cùng";
 <Grid item xs={12} mt={10} textAlign="center">
   <Box
     component="img"
-    src="/assets/images/QR.jfif" // thay bằng đường dẫn QR code của bạn
+    src="/assets/images/QR.JPG" // thay bằng đường dẫn QR code của bạn
     alt="QR Code"
     sx={{
       width: { xs: 200, md: 250 },
