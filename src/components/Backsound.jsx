@@ -11,11 +11,11 @@ import { motion } from "framer-motion";
 const Backsound = () => {
   const audioRef = React.useRef(null);
   const containerRef = React.useRef(null);
-  const [isPlay, setPlay] = React.useState(false);
+  const [isPlay, setPlay] = React.useState(true); // ✅ Mặc định là phát nhạc
   const [constraints, setConstraints] = React.useState({});
 
   /**
-   * Fungsi toggle button
+   * Toggle giữa phát / tạm dừng
    */
   const toggleAudio = () => {
     if (isPlay) {
@@ -23,39 +23,43 @@ const Backsound = () => {
     } else {
       audioRef.current.play();
     }
-
-    setPlay((prevState) => !prevState);
+    setPlay((prev) => !prev);
   };
 
   /**
-   * Auto play musik
+   * Auto play nhạc khi load component
    */
   React.useEffect(() => {
-    const playPromise = audioRef.current.play();
+    const audio = audioRef.current;
+    const playPromise = audio.play();
 
     if (playPromise !== undefined) {
       playPromise
-        .then(() => {
-          setPlay(true);
-        })
-        .catch(() => {
-          setPlay(false);
-        });
+        .then(() => setPlay(true))
+        .catch(() => setPlay(false)); // Nếu bị chặn autoplay
     }
-  }, [audioRef]);
+  }, []);
 
-  // observe when browser is resizing
+  /**
+   * Cập nhật giới hạn drag khi resize
+   */
   React.useLayoutEffect(() => {
-    const domRect = containerRef.current.getBoundingClientRect();
-    const { top, bottom, left, right } = domRect;
+    const updateConstraints = () => {
+      const domRect = containerRef.current.getBoundingClientRect();
+      const { top, bottom, left, right } = domRect;
 
-    setConstraints({
-      top: -top,
-      bottom: window.innerHeight - bottom,
-      left: -left,
-      right: window.innerWidth - right,
-    });
-  }, [containerRef, setConstraints]);
+      setConstraints({
+        top: -top,
+        bottom: window.innerHeight - bottom,
+        left: -left,
+        right: window.innerWidth - right,
+      });
+    };
+
+    updateConstraints();
+    window.addEventListener("resize", updateConstraints);
+    return () => window.removeEventListener("resize", updateConstraints);
+  }, []);
 
   return (
     <Box
@@ -80,10 +84,9 @@ const Backsound = () => {
     >
       <audio
         ref={audioRef}
-        component="audio"
         preload="true"
         loop
-        autoPlay={true}
+        autoPlay
         style={{ display: "none" }}
       >
         <source src="/assets/audio/backsound.mp3" type="audio/mp3" />
