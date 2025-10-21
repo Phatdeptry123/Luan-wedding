@@ -25,7 +25,7 @@ export default defineConfig({
       manifest: {
         name: "Đám cưới của Luân & Trúc",
         short_name: "Luân & Trúc",
-        description: "Ngày 08 Tháng 10 2025",
+        description: "Ngày 08 Tháng 11 2025",
         theme_color: "rgb(229, 229, 203)",
         background_color: "rgb(60, 42, 33)",
         orientation: "portrait",
